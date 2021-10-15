@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MinecraftPresente</string>
+    <string name="countdown">f.format(hour) + “:” + f.format(min) + “:” + f.format(sec)</string>
+</resources>
