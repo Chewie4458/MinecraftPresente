@@ -4,6 +4,7 @@ import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -23,49 +24,62 @@ public class MainActivity extends AppCompatActivity {
 
         int diaFinal = 23;
         //a definir
-        int horaFinal = 18;
+        int horaFinal = 19;
+        int minutoFinal = 00;
 
-        Calendar calendario = Calendar.getInstance();
+        int aux = diaFinal;
 
-        //dias
-        //pega o dia de hoje
-        int diaHoje = calendario.get(Calendar.DAY_OF_MONTH);
+        int msFaltantes = 0;
 
-        //calculando apenas os dias inteiros
-        int diaFaltantes = 22 - (diaHoje + 1);
+        //if só pra poder minimizar
+        if(diaFinal == aux) {
 
-        //dias faltantes em horas
-        int horasDias = diaFaltantes * 24;
+            Calendar calendario = Calendar.getInstance();
 
-        //horas hoje
-        //pega a hora atual
-        int horaAtual = calendario.get(Calendar.HOUR_OF_DAY);
-        System.out.println(horaAtual);
+            //dias
+            //pega o dia de hoje
+            int diaHoje = calendario.get(Calendar.DAY_OF_MONTH);
 
-        //calcula só as horas inteiras (+1)
-        int horasFaltantesDia = 24 - (horaAtual + 1);
+            //calculando apenas os dias inteiros
+            int diaFaltantes = 23 - (diaHoje + 1);
 
-        //minutos hoje
-        //pega o minuto atual
-        int minutoAtual = calendario.get(Calendar.MINUTE);
+            //dias faltantes em horas
+            int horasDias = diaFaltantes * 24;
 
-        //calcula os minutos inteiros faltantes (+1)
-        int minutosFaltantesHoje = 60 - (minutoAtual + 1);
+            //horas hoje
+            //pega a hora atual
+            int horaAtual = calendario.get(Calendar.HOUR_OF_DAY);
+            System.out.println(horaAtual);
 
-        //segundos hoje
-        //pega o segundo atual
-        int segundoAtual = calendario.get(Calendar.SECOND);
+            //calcula só as horas inteiras (+1)
+            int horasFaltantesDia = 24 - (horaAtual + 1);
 
-        //calcula os segundos faltantes
-        int segundosFaltantesHoje = 60 - segundoAtual;
+            //minutos hoje
+            //pega o minuto atual
+            int minutoAtual = calendario.get(Calendar.MINUTE);
 
-        //horas total
-        int horasTotal = horasDias + horasFaltantesDia + horaFinal;
+            //calcula os minutos inteiros faltantes (+1)
+            int minutosFaltantesHoje = 60 - (minutoAtual + 1);
 
-        //convertendo para milisegundos
-        int msFaltantes = (horasTotal * 3600000) + (minutosFaltantesHoje * 60000) + (segundosFaltantesHoje * 1000);
+            //segundos hoje
+            //pega o segundo atual
+            int segundoAtual = calendario.get(Calendar.SECOND);
+
+            //calcula os segundos faltantes
+            int segundosFaltantesHoje = 60 - segundoAtual;
+
+            //total
+            int horasTotal = horasDias + horasFaltantesDia + horaFinal;
+            int minutosTotal = minutosFaltantesHoje + minutoFinal;
+
+            //convertendo para milisegundos
+            msFaltantes = (horasTotal * 3600000) + (minutosTotal * 60000) + (segundosFaltantesHoje * 1000);
+
+        }
 
         final TextView txtCountdown = findViewById(R.id.txtCountdown);
+
+        //msFaltantes = 10000;
 
         new CountDownTimer(msFaltantes, 1000) {
 
@@ -106,10 +120,17 @@ public class MainActivity extends AppCompatActivity {
 
             public void onFinish() {
                 txtCountdown.setText("00:00:00");
-
+                switchActivities();
             }
 
         }.start();
+
+    }
+
+    //muda para outra tela
+    private void switchActivities() {
+        Intent switchActivityIntent = new Intent(this, Senhas.class);
+        startActivity(switchActivityIntent);
     }
 
 }
