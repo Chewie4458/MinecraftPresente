@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        int diasPara = 12;
+
         int diaFinal = 23;
         //a definir
         int horaFinal = 19;
