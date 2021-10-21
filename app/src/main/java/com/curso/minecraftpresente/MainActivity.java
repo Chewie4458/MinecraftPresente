@@ -22,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int diaFinal = 21;
+        /* pra testar só muda o 'msFaltantes' antes do countdown - só descomenta que tá em 10 seg */
+
+        int diaFinal = 23;
         //a definir
-        int horaFinal = 7;
-        int minutoFinal = 00;
+        int horaFinal = 19;
+        int minutoFinal = 30;
 
         int aux = diaFinal;
 
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             int diaHoje = calendario.get(Calendar.DAY_OF_MONTH);
 
             //calculando apenas os dias inteiros
-            int diaFaltantes = 20 - (diaHoje + 1);
+            int diaFaltantes = diaFinal - (diaHoje + 1);
 
             //dias faltantes em horas
             int horasDias = diaFaltantes * 24;
@@ -79,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView txtCountdown = findViewById(R.id.txtCountdown);
 
+        //para testar só mudar aqui (msFaltaltes)
         //msFaltantes = 10000;
 
         new CountDownTimer(msFaltantes, 1000) {
