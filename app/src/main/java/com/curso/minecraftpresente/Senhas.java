@@ -52,23 +52,19 @@ public class Senhas extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Checa se chegou no final de todas as perguntas, e libera as informações da conta
-                if(count == perguntas.length-1){
-                    /* txtPergunta.setVisibility(View.INVISIBLE);
-                    txtInfo.setText("Parabéns Gabriel");
-                    txtSenha.setVisibility(View.VISIBLE);
-                    edtResp.setVisibility(View.INVISIBLE);
-                    btnEnter.setVisibility(View.INVISIBLE); */
-                    switchActivities();
-                }
-                //Caso ainda falte perguntas, o contador aumenta e coloca a nova pergunta na tela
-                else{
-                    if(respostas[count].equals(edtResp.getText().toString().toLowerCase())){
-                        count++;
-                        txtPergunta.setText(perguntas[count]);
-                        System.out.println(count);
-                        edtResp.setText("");
+                    if(count == perguntas.length-1){
+                        if(respostas[count].equals(edtResp.getText().toString().toLowerCase())) {
+                            count++;
+                            switchActivities();
+                        }
+                    }else{
+                        if(respostas[count].equals(edtResp.getText().toString().toLowerCase())){
+                            count++;
+                            txtPergunta.setText(perguntas[count]);
+                            System.out.println(count);
+                            edtResp.setText("");
+                        }
                     }
-                }
             }
         });
     }
