@@ -19,15 +19,14 @@
     <Button
         android:id="@+id/btnSite"
         android:layout_width="403dp"
-        android:layout_height="355dp"
+        android:layout_height="80dp"
         android:background="#00FFFFFF"
-        android:backgroundTint="#E91E63"
+        android:backgroundTint="#00E91E63"
         android:backgroundTintMode="add"
-        android:text="coberto por segurança"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.472" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
