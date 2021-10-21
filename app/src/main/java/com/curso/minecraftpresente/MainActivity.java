@@ -22,11 +22,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int diasPara = 12;
-
-        int diaFinal = 23;
+        int diaFinal = 21;
         //a definir
-        int horaFinal = 19;
+        int horaFinal = 7;
         int minutoFinal = 00;
 
         int aux = diaFinal;
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             int diaHoje = calendario.get(Calendar.DAY_OF_MONTH);
 
             //calculando apenas os dias inteiros
-            int diaFaltantes = 23 - (diaHoje + 1);
+            int diaFaltantes = 20 - (diaHoje + 1);
 
             //dias faltantes em horas
             int horasDias = diaFaltantes * 24;
