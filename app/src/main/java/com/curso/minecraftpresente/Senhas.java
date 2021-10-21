@@ -66,6 +66,7 @@ public class Senhas extends AppCompatActivity {
                         count++;
                         txtPergunta.setText(perguntas[count]);
                         System.out.println(count);
+                        edtResp.setText("");
                     }
                 }
             }
