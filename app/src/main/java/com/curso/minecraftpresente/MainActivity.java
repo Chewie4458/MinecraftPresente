@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         int diaFinal = 23;
         //a definir
         int horaFinal = 19;
-        int minutoFinal = 30;
+        int minutoFinal = 19;
 
         int aux = diaFinal;
 
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView txtCountdown = findViewById(R.id.txtCountdown);
 
         //para testar só mudar aqui (msFaltaltes)
-        msFaltantes = 10000;
+        //msFaltantes = 10000;
 
         new CountDownTimer(msFaltantes, 1000) {
 
