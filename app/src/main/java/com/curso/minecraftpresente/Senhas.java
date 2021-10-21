@@ -33,8 +33,8 @@ public class Senhas extends AppCompatActivity {
     private Button btnEnter;
 
     //Lista com as perguntas e respostas
-    String[] perguntas = {"A única boa do Mestre de Cerimônia que Voa", "Pergunta 2", "Pergunta 3", "Pergunta 4"};
-    String[] respostas = {"love is easy", "b", "c", "d"};
+    String[] perguntas = {"Primeiramente, a contagem: ", "A única boa do Mestre de Cerimônia que Voa: ", "Um nome legen-dary: ", "V² = Vo² + 2 * a * Δs", "Abra o armário para pegar as lâmpadas"};
+    String[] respostas = {"3 2 1", "love is easy", "marvin wait for it eriksen", "vovó e vovô mais dois anões em uma pirâmide de safadeza", "7950"};
 
     private int count = 0;
 
