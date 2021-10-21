@@ -48,7 +48,7 @@ public class Senhas extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                if(count == 3){
+                if(count == perguntas.length - 1){
                     txtPergunta.setVisibility(View.INVISIBLE);
                     txtInfo.setText("Parabéns Gabriel");
                     txtSenha.setVisibility(View.VISIBLE);
