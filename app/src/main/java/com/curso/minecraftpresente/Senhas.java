@@ -56,6 +56,8 @@ public class Senhas extends AppCompatActivity {
                         if(respostas[count].equals(edtResp.getText().toString().toLowerCase())) {
                             count++;
                             switchActivities();
+                        }else{
+                            count = perguntas.length-1;
                         }
                     }else{
                         if(respostas[count].equals(edtResp.getText().toString().toLowerCase())){
