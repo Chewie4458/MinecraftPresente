@@ -16,4 +16,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/artboard_1" />
 
+    <Button
+        android:id="@+id/btnSite"
+        android:layout_width="398dp"
+        android:layout_height="118dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00E91E63"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

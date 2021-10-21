@@ -3,8 +3,11 @@ package com.curso.minecraftpresente;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.renderscript.RenderScript;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +39,8 @@ public class Senhas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_senhas);
 
+        //Vibração do botão
+        final Vibrator vibrar = (Vibrator)Senhas.this.getSystemService(Context.VIBRATOR_SERVICE);
 
         txtInfo = (TextView)findViewById(R.id.txtInfo);
         txtPergunta = (TextView)findViewById(R.id.txtPergunta);
@@ -49,6 +54,8 @@ public class Senhas extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+                //vibração
+                vibrar.vibrate(55);
                 //Checa se chegou no final de todas as perguntas, e libera as informações da conta
                     if(count == perguntas.length-1){
                         if(respostas[count].equals(edtResp.getText().toString().toLowerCase())) {
