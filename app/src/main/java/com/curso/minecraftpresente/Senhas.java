@@ -1,26 +1,16 @@
 package com.curso.minecraftpresente;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.renderscript.RenderScript;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextClock;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
-import java.lang.ref.SoftReference;
 
 public class Senhas extends AppCompatActivity {
 
@@ -84,7 +74,7 @@ public class Senhas extends AppCompatActivity {
     }
 
     private void switchActivities() {
-        Intent switchActivityIntent = new Intent(this, Final.class);
+        Intent switchActivityIntent = new Intent(this, Pedro.class);
         startActivity(switchActivityIntent);
     }
 }

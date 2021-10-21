@@ -15,15 +15,10 @@
         android:theme="@style/NoActionBar">
 
         <activity
-            android:name=".Final"
+            android:name=".Pedro"
             android:label="@string/title_activity_final"
             android:screenOrientation="portrait">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
 
@@ -36,10 +31,10 @@
             android:screenOrientation="portrait">
 
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
     </application>
 

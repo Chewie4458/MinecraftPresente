@@ -10,7 +10,7 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 
-public class Final extends AppCompatActivity {
+public class Pedro extends AppCompatActivity {
 
     private Button btnSite;
     @Override
@@ -19,7 +19,7 @@ public class Final extends AppCompatActivity {
         setContentView(R.layout.activity_final2);
 
         //Vibração do botão
-        final Vibrator vibrar = (Vibrator)Final.this.getSystemService(Context.VIBRATOR_SERVICE);
+        final Vibrator vibrar = (Vibrator) Pedro.this.getSystemService(Context.VIBRATOR_SERVICE);
 
         btnSite = (Button)findViewById(R.id.btnSite);
 

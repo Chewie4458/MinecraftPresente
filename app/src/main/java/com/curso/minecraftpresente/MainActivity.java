@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             int diaHoje = calendario.get(Calendar.DAY_OF_MONTH);
 
             //calculando apenas os dias inteiros
-            int diaFaltantes = diaFinal - (diaHoje + 1);
+            int diaFaltantes = 23 - (diaHoje + 1);
 
             //dias faltantes em horas
             int horasDias = diaFaltantes * 24;
