@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".Final">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="funciona"
-        android:textSize="36sp"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="628dp"
+        android:layout_height="904dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/artboard_1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

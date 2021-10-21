@@ -19,7 +19,6 @@ public class Senhas extends AppCompatActivity {
 
 
     private TextView txtInfo;
-    private TextView txtSenha;
     private TextView txtPergunta;
 
     private EditText edtResp;
@@ -39,7 +38,6 @@ public class Senhas extends AppCompatActivity {
 
 
         txtInfo = (TextView)findViewById(R.id.txtInfo);
-        txtSenha = (TextView)findViewById(R.id.txtSenha);
         txtPergunta = (TextView)findViewById(R.id.txtPergunta);
 
         edtResp = (EditText)findViewById(R.id.edtResp);
