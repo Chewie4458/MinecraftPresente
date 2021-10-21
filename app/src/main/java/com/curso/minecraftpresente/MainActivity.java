@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView txtCountdown = findViewById(R.id.txtCountdown);
 
         //para testar só mudar aqui (msFaltaltes)
-        //msFaltantes = 10000;
+        msFaltantes = 10000;
 
         new CountDownTimer(msFaltantes, 1000) {
 

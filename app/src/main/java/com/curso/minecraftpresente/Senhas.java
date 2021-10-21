@@ -53,11 +53,12 @@ public class Senhas extends AppCompatActivity {
             public void onClick(View v) {
                 //Checa se chegou no final de todas as perguntas, e libera as informações da conta
                 if(count == perguntas.length-1){
-                    txtPergunta.setVisibility(View.INVISIBLE);
+                    /* txtPergunta.setVisibility(View.INVISIBLE);
                     txtInfo.setText("Parabéns Gabriel");
                     txtSenha.setVisibility(View.VISIBLE);
                     edtResp.setVisibility(View.INVISIBLE);
-                    btnEnter.setVisibility(View.INVISIBLE);
+                    btnEnter.setVisibility(View.INVISIBLE); */
+                    switchActivities();
                 }
                 //Caso ainda falte perguntas, o contador aumenta e coloca a nova pergunta na tela
                 else{
@@ -69,5 +70,10 @@ public class Senhas extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void switchActivities() {
+        Intent switchActivityIntent = new Intent(this, Final.class);
+        startActivity(switchActivityIntent);
     }
 }
